@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Rice Image Classifier</title>
+    <style>
+        body {
+            background-color: #f5f7fa;
+            font-family: 'Segoe UI', sans-serif;
+            text-align: center;
+            padding: 50px;
+        }
+        h1 {
+            color: #2c3e50;
+        }
+        p {
+            color: #34495e;
+            font-size: 18px;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+            max-width: 600px;
+            margin: auto;
+        }
+        .button {
+            background-color: #3498db;
+            color: white;
+            padding: 12px 24px;
+            font-size: 16px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            margin-top: 20px;
+            text-decoration: none;
+        }
+        .image-container {
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🌾 Rice Image Classifier</h1>
+        <p>This application classifies rice grain images using a MobileNetV2-based deep learning model.</p>
+
+        <div class="image-container">
+            <img src="{{ url_for('static', filename='img/rice_banner.jpg') }}" alt="Rice image" width="80%">
+        </div>
+
+        <a class="button" href="/details">Predict</a>
+    </div>
+</body>
+</html>

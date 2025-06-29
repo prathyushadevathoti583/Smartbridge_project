@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Prediction Result</title>
+    <style>
+        body {
+            background-color: #fdfefe;
+            font-family: 'Segoe UI', sans-serif;
+            text-align: center;
+            padding: 50px;
+        }
+        .result-box {
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+            max-width: 600px;
+            margin: auto;
+        }
+        img {
+            margin-top: 20px;
+            border-radius: 10px;
+            width: 300px;
+        }
+        .prediction {
+            font-size: 22px;
+            color: #2c3e50;
+            margin-top: 20px;
+        }
+        a {
+            display: inline-block;
+            margin-top: 30px;
+            background-color: #2980b9;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="result-box">
+        <h2>🔍 Classification Result</h2>
+        <p class="prediction">Predicted Class: <strong>{{ prediction }}</strong></p>
+        <img src="{{ url_for('static', filename='uploads/' + image_file) }}" alt="Uploaded Image">
+        <br>
+        <a href="/">Back to Home</a>
+    </div>
+</body>
+</html>
